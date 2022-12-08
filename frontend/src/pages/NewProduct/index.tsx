@@ -47,7 +47,7 @@ export function NewProduct() {
         </div>
         
         <div className={styles.actionButtons}>
-          <button className={styles.cancelBtn} onClick={() => {navigate('/')}} id="cancel">Cancel</button>
+          <button className={styles.cancelBtn} onClick={() => {navigate('/')}}>Cancel</button>
         </div>
       </header>
 
@@ -104,7 +104,7 @@ export function NewProduct() {
             </div>
           ))}
 
-          <button className={newProductStyles.submitButton}>Save</button>
+          <button>Save</button>
         </form>
 
         <img className={newProductStyles.banner} src={warehouse} alt="warehouse-banner"/>

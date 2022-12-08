@@ -17,7 +17,7 @@ form {
   overflow-y: auto;
 }
 
-.submitButton {
+form button {
   width: 170px;
   padding: 8px;
   align-self: center;
