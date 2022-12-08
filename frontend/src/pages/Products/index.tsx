@@ -40,7 +40,7 @@ export function Products() {
           <h1>Product List</h1>
         </PageTitleContainer>
         <ActionButtonsContainer>
-          <button id="add" onClick={()=> { navigate("/new-product") }}>ADD</button>
+          <button id="add" onClick={()=> { navigate("/addproduct") }}>ADD</button>
           <button id="delete-product-btn" onClick={() => deleteProducts(selectedProducts)}>MASS DELETE</button>
         </ActionButtonsContainer>
       </Header>
