@@ -42,20 +42,20 @@ export function NewProduct() {
     <main className={styles.mainContainer}>
       <header>
         <div className={styles.titleContainer}>
-          <img className={styles.logo} src={logo} alt="" />
+          <img src={logo} alt="logo" />
           <h1>Product Add</h1>
         </div>
         
         <div className={styles.actionButtons}>
-          <button onClick={() => {navigate('/')}} id="cancel">Cancel</button>
+          <button className={styles.cancelBtn} onClick={() => {navigate('/')}} id="cancel">Cancel</button>
         </div>
       </header>
 
       <div className={newProductStyles.bodyContainer}>
         <form onSubmit={handleSubmit(handleNewProduct)} id="product_form">
           <div className={newProductStyles.formHeader}>
-            <h1 className={newProductStyles.formTitle}>New Product</h1>
-            <img className={newProductStyles.formImage} src={product_logo} alt="" />
+            <h1>New Product</h1>
+            <img className={newProductStyles.formImage} src={product_logo} alt="add-product-image" />
           </div>
           
           {generalProducts.map(({ label, id, inputType }) => (
@@ -107,7 +107,7 @@ export function NewProduct() {
           <button className={newProductStyles.submitButton}>Save</button>
         </form>
 
-        <img className={newProductStyles.banner} src={warehouse} alt=""/>
+        <img className={newProductStyles.banner} src={warehouse} alt="warehouse-banner"/>
       </div>
 
       <Footer />

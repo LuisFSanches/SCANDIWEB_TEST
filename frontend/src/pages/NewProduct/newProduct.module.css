@@ -25,17 +25,17 @@ form {
 }
 
 .submitButton {
-    width: 170px;
-    padding: 10px;
-    align-self: center;
-    margin-top: 12px;
-    border-radius: 10px;
-    background-color: var(--dark-purple);
-    font-size: 20px;
+  width: 170px;
+  padding: 10px;
+  align-self: center;
+  margin-top: 12px;
+  border-radius: 10px;
+  background-color: var(--dark-purple);
+  font-size: 20px;
 }
 
 .submitButton:hover {
-    filter: brightness(75%);
+  filter: brightness(75%);
 }
 
 .formHeader {
@@ -45,7 +45,7 @@ form {
   justify-content: center;
   align-items: center;
 }
-.formTitle {
+.bodyContainer h1 {
   color: var(--ligh-black);
 }
 .formImage {

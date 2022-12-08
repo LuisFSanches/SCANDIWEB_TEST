@@ -35,7 +35,7 @@ export function Products() {
     <main className={styles.mainContainer}>
       <header>
         <div className={styles.titleContainer}>
-          <img className={styles.logo} src={logo} alt="" />
+          <img src={logo} alt="logo" />
           <h1>Product List</h1>
         </div>
         <div className={styles.actionButtons}>
