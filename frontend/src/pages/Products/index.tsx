@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 import ProductCard from "../../components/ProductCard";
 import { ActionButtonsContainer, Header, MainContainer, PageTitleContainer, ProductsContainer } from '../style';
@@ -40,7 +40,9 @@ export function Products() {
           <h1>Product List</h1>
         </PageTitleContainer>
         <ActionButtonsContainer>
-          <button id="add" onClick={()=> { navigate("/addproduct") }}>ADD</button>
+          <button id="add">
+            <Link to="/addproduct">ADD</Link>
+          </button>
           <button id="delete-product-btn" onClick={() => deleteProducts(selectedProducts)}>MASS DELETE</button>
         </ActionButtonsContainer>
       </Header>
