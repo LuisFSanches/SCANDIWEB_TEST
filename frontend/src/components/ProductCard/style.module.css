@@ -4,16 +4,6 @@
   border-radius: 10px;
   border: 2px solid var(--dark-purple);
   box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem #939393;
-
-  @media(max-width: 845px) {
-    width: 240px;
-    height: 240px;
-  }
-
-  @media(max-width: 535px) {
-    width: 300px;
-    height: 220px;
-  }
 }
 
 input[type=checkbox] {
@@ -37,3 +27,17 @@ input[type=checkbox] {
 }
 
 
+@media(max-width: 845px) {
+  .container {
+    width: 240px;
+    height: 240px;
+  }
+  
+}
+
+@media(max-width: 535px) {
+  .container {
+    width: 300px;
+    height: 220px;
+  }
+}

@@ -8,10 +8,6 @@
   background-color: var(--dark-purple);
   position: absolute;
   bottom: 0;
-
-  @media(max-width: 550px) {
-    position: relative;
-  }
 }
 
 .container p {
@@ -19,4 +15,10 @@
   font-weight: 600;
   font-style: italic;
   color: #fff;
+}
+
+@media(max-width: 550px) {
+  .container {
+    position: relative;
+  }
 }

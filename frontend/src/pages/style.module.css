@@ -12,10 +12,6 @@ header {
   align-items: center;
   padding: 5px 50px;
   border-bottom: 1px solid var(--dark-purple);
-
-  @media(max-width: 650px) {
-    padding: 5px 0px; 
-  }
 }
 
 .titleContainer {
@@ -26,10 +22,6 @@ header {
 h1 {
   margin-left: 10px;
   color: #de1f26;
-
-  @media(max-width: 650px) {
-    font-size: 25px;
-  }
 }
 
 .titleContainer img{
@@ -40,16 +32,6 @@ h1 {
   width: 280px;
   display: flex;
   justify-content: space-between;
-
-  @media(max-width: 650px) {
-    justify-content: end;
-    margin-right: 15px;
-  }
-
-  @media(max-width: 450px) {
-    flex-direction: column;
-    margin-left: 40px;
-  }
 }
 
 .deleteBtn, .cancelBtn {
@@ -73,20 +55,48 @@ h1 {
   margin-top: 10px;
   justify-items: center;
   overflow-y: auto;
+}
 
-  @media(max-width: 1450px) {
+@media(max-width: 1450px) {
+  .productContainer {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}
 
-  @media(max-width: 1190px) {
+@media(max-width: 1190px) {
+  .productContainer {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
 
-  @media(max-width: 845px) {
+@media(max-width: 845px) {
+  .productContainer {
     grid-template-columns: 1fr 1fr;
   }
+}
 
-  @media(max-width: 535px) {
+@media(max-width: 650px) {
+  header {
+    padding: 5px 0px; 
+  }
+  h1 {
+    font-size: 25px;
+  }
+  .actionButtons {
+    justify-content: end;
+    margin-right: 15px;
+  }
+}
+
+@media(max-width: 535px) {
+  .productContainer {
     grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 450px) {
+  .actionButtons {
+    flex-direction: column;
+    margin-left: 40px;
   }
 }

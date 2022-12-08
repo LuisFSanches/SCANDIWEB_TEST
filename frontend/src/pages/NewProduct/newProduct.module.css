@@ -5,9 +5,6 @@
 
 .banner {
   width: 50vw;
-  @media(max-width: 950px) {
-    display: none;
-  }
 }
 
 form {
@@ -18,15 +15,11 @@ form {
   margin: 0 auto;
   padding: 5px 15px;
   overflow-y: auto;
-
-  @media(max-width: 950px) {
-    width: 90vw; 
-  }
 }
 
 .submitButton {
   width: 170px;
-  padding: 10px;
+  padding: 8px;
   align-self: center;
   margin-top: 12px;
   border-radius: 10px;
@@ -57,17 +50,13 @@ form {
   display: flex;
   flex-direction: column;
   padding: 0.3rem 1rem;
-
-  @media(max-width: 1250px) {
-    width: 100%; 
-  }
 }
 
 label {
   align-self: start;
   margin-left: 10px;
   margin-bottom: 5px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--ligh-black);
 }
@@ -75,18 +64,34 @@ label {
 input,
 select {
   width: 100%;
-  padding: 0.4rem;
+  padding: 0.45rem;
+  padding-left: 1rem;
   border: 1px solid var(--black);
   border-radius: 1rem;
   background: var(--light-purple);
-  font-size: 1.2rem;
   font-weight: 600;
   color: #fff;
 }
 
-.error-message {
+.errorMessage {
   align-self: center;
   color: red;
   font-size: 18px;
   font-weight: 700;
 }
+
+@media(max-width: 1250px) {
+  .formGroup {
+    width: 100%; 
+  }
+}
+
+@media(max-width: 950px) {
+  form {
+    width: 90vw;
+  }
+  .banner {
+    display: none;
+  }
+}
+  

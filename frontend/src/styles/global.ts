@@ -54,7 +54,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     input,textarea,select {
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-family: 'Roboto', sans-serif;
       border: none;
       outline: none;

@@ -60,7 +60,7 @@ export function NewProduct() {
           
           {generalProducts.map(({ label, id, inputType }) => (
             <div className={newProductStyles.formGroup} key={id}>
-              <label htmlFor="">{label}:</label>
+              <label>{label}:</label>
               <input 
                 type={`${inputType}`} 
                 id={`${id}`}
@@ -70,12 +70,12 @@ export function NewProduct() {
                   }
                 )}
               />
-              <p className="error-message">{ errors[`${id}`]?.message as any }</p>
+              <p className={newProductStyles.errorMessage}>{ errors[`${id}`]?.message as string }</p>
             </div>
           ))}
 
           <div className={newProductStyles.formGroup}>
-            <label htmlFor="">Type Switcher:</label>
+            <label>Type Switcher:</label>
             <select 
               id="productType" 
               onChange={(e) => selectType(e.target.value)}
@@ -85,12 +85,12 @@ export function NewProduct() {
               <option value="Furniture">Furniture</option>
               <option value="Book">Book</option>
             </select>
-            <p className="error-message">{ errors.type?.message as any }</p>
+            <p className={newProductStyles.errorMessage}>{ errors.type?.message as string }</p>
           </div>
 
           {productsByType.map(({ label, id, inputType })=> (
             <div className={newProductStyles.formGroup} key={id}>
-              <label htmlFor="">{label}:</label>
+              <label>{label}:</label>
               <input 
                 type={`${inputType}`} 
                 id={`${id}`}
@@ -100,7 +100,7 @@ export function NewProduct() {
                   }
                 )}
               />
-              <p className="error-message">{ errors[`${id}`]?.message as any }</p>
+              <p className={newProductStyles.errorMessage}>{errors[`${id}`]?.message as string}</p>
             </div>
           ))}
 
