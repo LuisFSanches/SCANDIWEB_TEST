@@ -13,5 +13,8 @@
     ],
     "require": {
         "vlucas/phpdotenv": "^5.5"
+    },
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "^227.0"
     }
 }
