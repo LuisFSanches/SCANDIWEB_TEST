@@ -1,0 +1,92 @@
+.mainContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 50px;
+  border-bottom: 1px solid var(--dark-purple);
+
+  @media(max-width: 650px) {
+    padding: 5px 0px; 
+  }
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  margin-left: 10px;
+  color: #de1f26;
+
+  @media(max-width: 650px) {
+    font-size: 25px;
+  }
+}
+
+.logo {
+  width: 70px;
+}
+
+.actionButtons {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+
+  @media(max-width: 650px) {
+    justify-content: end;
+    margin-right: 15px;
+  }
+
+  @media(max-width: 450px) {
+    flex-direction: column;
+    margin-left: 40px;
+  }
+}
+
+.deleteBtn, .cancelBtn {
+  width: 150px;
+  padding: 5px;
+  border-radius: 5px;
+  background: var(--red);
+}
+
+.addBtn {
+  width: 85px;
+  padding: 5px;
+  border-radius: 5px;
+  background: var(--dark-purple);
+}
+
+.productContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+  justify-items: center;
+  overflow-y: auto;
+
+  @media(max-width: 1450px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media(max-width: 1190px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media(max-width: 845px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media(max-width: 535px) {
+    grid-template-columns: 1fr;
+  }
+}

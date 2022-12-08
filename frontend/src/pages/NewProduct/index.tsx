@@ -1,8 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Footer from "../../components/Footer";
-import { ActionButtonsContainer, Header, MainContainer, PageTitleContainer } from "../style";
-import { BodyContainer, Form, FormGroup, FormHeader } from "./newProduct";
 import logo from '../../assets/images/logo.png';
 import product_logo from '../../assets/images/product_logo.png';
 import warehouse from '../../assets/images/warehouse.jpg';
@@ -10,6 +8,9 @@ import { PRODUCT_CONSTANTS } from '../../constants/product';
 import { useState } from "react";
 import { IProduct } from "../../interfaces/IProduct";
 import { create } from "../../services/product";
+
+import styles from '../style.module.css';
+import newProductStyles from './newProduct.module.css';
 
 export function NewProduct() {
   const navigate = useNavigate();
@@ -37,28 +38,28 @@ export function NewProduct() {
     navigate('/');
   }
 
-  return(
-    <MainContainer>
-      <Header>
-        <PageTitleContainer>
-          <img src={logo} alt="" />
+  return (
+    <main className={styles.mainContainer}>
+      <header>
+        <div className={styles.titleContainer}>
+          <img className={styles.logo} src={logo} alt="" />
           <h1>Product Add</h1>
-        </PageTitleContainer>
+        </div>
         
-        <ActionButtonsContainer>
+        <div className={styles.actionButtons}>
           <button onClick={() => {navigate('/')}} id="cancel">Cancel</button>
-        </ActionButtonsContainer>
-      </Header>
+        </div>
+      </header>
 
-      <BodyContainer>
-        <Form onSubmit={handleSubmit(handleNewProduct)} id="product_form">
-          <FormHeader>
-            <h1>New Product</h1>
-            <img src={product_logo} alt="" />
-          </FormHeader>
+      <div className={newProductStyles.bodyContainer}>
+        <form onSubmit={handleSubmit(handleNewProduct)} id="product_form">
+          <div className={newProductStyles.formHeader}>
+            <h1 className={newProductStyles.formTitle}>New Product</h1>
+            <img className={newProductStyles.formImage} src={product_logo} alt="" />
+          </div>
           
           {generalProducts.map(({ label, id, inputType }) => (
-            <FormGroup key={id}>
+            <div className={newProductStyles.formGroup} key={id}>
               <label htmlFor="">{label}:</label>
               <input 
                 type={`${inputType}`} 
@@ -70,10 +71,10 @@ export function NewProduct() {
                 )}
               />
               <p className="error-message">{ errors[`${id}`]?.message as any }</p>
-            </FormGroup>
+            </div>
           ))}
 
-          <FormGroup>
+          <div className={newProductStyles.formGroup}>
             <label htmlFor="">Type Switcher:</label>
             <select 
               id="productType" 
@@ -85,10 +86,10 @@ export function NewProduct() {
               <option value="Book">Book</option>
             </select>
             <p className="error-message">{ errors.type?.message as any }</p>
-          </FormGroup>
+          </div>
 
           {productsByType.map(({ label, id, inputType })=> (
-            <FormGroup key={id}>
+            <div className={newProductStyles.formGroup} key={id}>
               <label htmlFor="">{label}:</label>
               <input 
                 type={`${inputType}`} 
@@ -100,16 +101,16 @@ export function NewProduct() {
                 )}
               />
               <p className="error-message">{ errors[`${id}`]?.message as any }</p>
-            </FormGroup>
+            </div>
           ))}
 
-          <button>Save</button>
-        </Form>
+          <button className={newProductStyles.submitButton}>Save</button>
+        </form>
 
-        <img src={warehouse} alt="" id="banner"/>
-      </BodyContainer>
+        <img className={newProductStyles.banner} src={warehouse} alt=""/>
+      </div>
 
       <Footer />
-    </MainContainer>
+    </main>
   )
 }

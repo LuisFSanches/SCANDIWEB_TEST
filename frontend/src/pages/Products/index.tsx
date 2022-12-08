@@ -1,11 +1,10 @@
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
 import ProductCard from "../../components/ProductCard";
-import { ActionButtonsContainer, Header, MainContainer, PageTitleContainer, ProductsContainer } from '../style';
 import { useEffect, useState } from "react";
 import { IProduct } from "../../interfaces/IProduct";
 import { list, deleteMany } from "../../services/product";
-
+import styles from '../style.module.css';
 import logo from '../../assets/images/logo.png';
 
 export function Products() {
@@ -33,26 +32,24 @@ export function Products() {
   }, [])
 
   return (
-    <MainContainer>
-      <Header>
-        <PageTitleContainer>
-          <img src={logo} alt="" />
+    <main className={styles.mainContainer}>
+      <header>
+        <div className={styles.titleContainer}>
+          <img className={styles.logo} src={logo} alt="" />
           <h1>Product List</h1>
-        </PageTitleContainer>
-        <ActionButtonsContainer>
-          <button id="add">
-            <Link to="/addproduct">ADD</Link>
-          </button>
-          <button id="delete-product-btn" onClick={() => deleteProducts(selectedProducts)}>MASS DELETE</button>
-        </ActionButtonsContainer>
-      </Header>
+        </div>
+        <div className={styles.actionButtons}>
+          <button className={styles.addBtn} id="add" onClick={()=> { navigate("/addproduct") }}>ADD</button>
+          <button className={styles.deleteBtn} id="delete-product-btn" onClick={() => deleteProducts(selectedProducts)}>MASS DELETE</button>
+        </div>
+      </header>
 
-      <ProductsContainer>
+      <div className={styles.productContainer}>
         {products && products?.map((product) => (
           <ProductCard data={product} selectProduct={selectProduct} key={product.id}/>
         ))}
-      </ProductsContainer>
+      </div>
       <Footer />
-    </MainContainer>
+    </main>
   )
 }
