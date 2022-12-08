@@ -106,8 +106,6 @@ export function NewProduct() {
 
           <button>Save</button>
         </form>
-
-        <img className={newProductStyles.banner} src={warehouse} alt="warehouse-banner"/>
       </div>
 
       <Footer />
