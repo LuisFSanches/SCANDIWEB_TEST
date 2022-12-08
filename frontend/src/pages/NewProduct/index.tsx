@@ -51,19 +51,21 @@ export function NewProduct() {
       </Header>
 
       <BodyContainer>
-        <Form onSubmit={handleSubmit(handleNewProduct)}>
+        <Form onSubmit={handleSubmit(handleNewProduct)} id="product_form">
           <FormHeader>
             <h1>New Product</h1>
             <img src={product_logo} alt="" />
           </FormHeader>
           
           {generalProducts.map(({ label, id, inputType }) => (
-            <FormGroup>
+            <FormGroup key={id}>
               <label htmlFor="">{label}:</label>
               <input 
-                type={`${inputType}`} id={`${id}`}
+                type={`${inputType}`} 
+                id={`${id}`}
+                step="any"
                 {...register(`${id}`, {
-                  required: `${label} is required`
+                  required: `${id} is required`
                   }
                 )}
               />
@@ -86,14 +88,14 @@ export function NewProduct() {
           </FormGroup>
 
           {productsByType.map(({ label, id, inputType })=> (
-            <FormGroup>
+            <FormGroup key={id}>
               <label htmlFor="">{label}:</label>
               <input 
-                type={`${inputType}`} id={`${id}`}
+                type={`${inputType}`} 
+                id={`${id}`}
                 step="any"
- 
                 {...register(`${id}`, {
-                  required: `${label} is required`
+                  required: `${id} is required`
                   }
                 )}
               />

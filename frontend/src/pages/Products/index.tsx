@@ -32,7 +32,6 @@ export function Products() {
     getProducts()
   }, [])
 
-  console.log(products);
   return (
     <MainContainer>
       <Header>
@@ -48,7 +47,7 @@ export function Products() {
 
       <ProductsContainer>
         {products && products?.map((product) => (
-          <ProductCard data={product} selectProduct={selectProduct}/>
+          <ProductCard data={product} selectProduct={selectProduct} key={product.id}/>
         ))}
       </ProductsContainer>
       <Footer />

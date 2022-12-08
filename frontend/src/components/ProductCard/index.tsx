@@ -14,15 +14,15 @@ export default function ProductCard({ data, selectProduct }: IProductCard) {
   const checkType = () => {
     switch(type) {
       case 'Book':
-        return { label: `Weight: ${data['weight']} Kg`, color: '#C7DCA6' };
+        return { label: `Weight: ${data['weight']} Kg`, color: '#7ae95f' };
       case 'DVD':
-        return { label: `Size: ${data['size']}Mb`, color: '#ea9999'};
+        return { label: `Size: ${data['size']}Mb`, color: '#ADADAD'};
       case 'Furniture':
         return {
           label: `Dimension: 
             ${data['length']} x ${data['width']} x ${data['height']}
           `,
-          color: '#E1B164'
+          color: '#FFD700'
         }
       default:
         return null;

@@ -42,11 +42,15 @@ export const PageTitleContainer = styled.div`
 
 export const ProductsContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 10px;
   margin-top: 10px;
   justify-items: center;
   overflow-y: auto;
+
+  @media(max-width: 1450px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 
   @media(max-width: 1190px) {
     grid-template-columns: 1fr 1fr 1fr;
