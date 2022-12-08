@@ -41,7 +41,7 @@ export function Products() {
         </PageTitleContainer>
         <ActionButtonsContainer>
           <button id="add" onClick={()=> { navigate("/new-product") }}>ADD</button>
-          <button id="#delete-product-btn" onClick={() => deleteProducts(selectedProducts)}>MASS DELETE</button>
+          <button id="delete-product-btn" onClick={() => deleteProducts(selectedProducts)}>MASS DELETE</button>
         </ActionButtonsContainer>
       </Header>
 
