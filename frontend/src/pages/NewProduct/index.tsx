@@ -74,15 +74,15 @@ export function NewProduct() {
           ))}
 
           <FormGroup>
-            <label htmlFor="">Type:</label>
+            <label htmlFor="">Type Switcher:</label>
             <select 
               id="#productType" 
               onChange={(e) => selectType(e.target.value)}
             >
-              <option value="">Select</option>
-              <option value="DVD" id="DVD">DVD</option>
-              <option value="Furniture" id="Furniture">Furniture</option>
-              <option value="Book" id="Book">Book</option>
+              <option value="">Type Switcher</option>
+              <option value="DVD">DVD</option>
+              <option value="Furniture">Furniture</option>
+              <option value="Book">Book</option>
             </select>
             <p className="error-message">{ errors.type?.message as any }</p>
           </FormGroup>
