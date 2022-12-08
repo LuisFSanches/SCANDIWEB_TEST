@@ -51,7 +51,7 @@ export function NewProduct() {
       </Header>
 
       <BodyContainer>
-        <Form onSubmit={handleSubmit(handleNewProduct)} id="product_form">
+        <Form onSubmit={handleSubmit(handleNewProduct)} id="#product_form">
           <FormHeader>
             <h1>New Product</h1>
             <img src={product_logo} alt="" />
@@ -62,7 +62,7 @@ export function NewProduct() {
               <label htmlFor="">{label}:</label>
               <input 
                 type={`${inputType}`} 
-                id={`${id}`}
+                id={`#${id}`}
                 step="any"
                 {...register(`${id}`, {
                   required: `${id} is required`
@@ -76,7 +76,7 @@ export function NewProduct() {
           <FormGroup>
             <label htmlFor="">Type:</label>
             <select 
-              id="productType" 
+              id="#productType" 
               onChange={(e) => selectType(e.target.value)}
             >
               <option value="">Select</option>
@@ -92,7 +92,7 @@ export function NewProduct() {
               <label htmlFor="">{label}:</label>
               <input 
                 type={`${inputType}`} 
-                id={`${id}`}
+                id={`#${id}`}
                 step="any"
                 {...register(`${id}`, {
                   required: `${id} is required`
