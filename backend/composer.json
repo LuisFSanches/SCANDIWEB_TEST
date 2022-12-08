@@ -1,0 +1,17 @@
+{
+    "name": "luis/scandiweb-test",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App"
+        }
+    },
+    "authors": [
+        {
+            "name": "LuisF",
+            "email": "luis-lipe@hotmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
