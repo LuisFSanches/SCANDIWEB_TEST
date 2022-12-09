@@ -19,6 +19,8 @@ In order to run the project locally you'll need composer and apache installed an
 <br />
 Open the project and then run composer update.
 <br />
+Create an .env file, with the same variables that are inside .env.sample.
+<br />
 Run the sql file on your local mysql database manager.
 <br />
 Put the project on your apache directory.
