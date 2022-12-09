@@ -21,7 +21,9 @@ With the dependencies installed, run the project using npm run dev.
 ### Backend
 In order to run the project locally you'll need composer and apache installed and configured on your machine.
 Run composer update.
+<br />
 Run the sql file on your local mysql database manager.
+<br />
 Put the project on your apache directory.
 
 ## Screenshots
