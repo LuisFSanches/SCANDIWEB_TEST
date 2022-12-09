@@ -16,7 +16,7 @@ but since it wasn't compatible with the Test QA, it was removed fromt the pages 
 
 ### Frontend
 The project was made using node v16.16, to install all the dependencies simply run npm install.
-With the dependencies installed, run the project, npm run dev.
+With the dependencies installed, run the project using npm run dev.
 
 ### Backend
 In order to run the project locally you'll need composer and apache installed and configured on your machine.
