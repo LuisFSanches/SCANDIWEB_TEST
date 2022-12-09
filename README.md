@@ -14,15 +14,23 @@ but since it wasn't compatible with the Test QA, it was removed fromt the pages 
 
 ## How to install and Execute
 
-### Frontend
-The project was made using node v16.16, to install all the dependencies simply run npm install.
-With the dependencies installed, run the project, npm run dev.
-
 ### Backend
 In order to run the project locally you'll need composer and apache installed and configured on your machine.
-Run composer update.
+<br />
+Open the project and then run composer update.
+<br />
 Run the sql file on your local mysql database manager.
+<br />
 Put the project on your apache directory.
+
+### Frontend
+The project was made using node v16.16.
+<br />
+To install all the dependencies simply run npm install.
+<br />
+Create a .env file, with the base url variable inside of it.
+<br />
+Run the project using npm run dev.
 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/49485457/206583522-c24c9b1c-8b67-468e-bba3-cb06b61d3c6b.png)
