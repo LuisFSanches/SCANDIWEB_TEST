@@ -29,23 +29,21 @@ use App\Core\Controller;
         exit;
       }
 
-      $productModel->name = $body->name;
-      $productModel->price = floatval($body->price);
-      $productModel->sku = $body->sku;
-      $productModel->type = $body->type;
-      $productModel->size = $body->size;
-      $productModel->weight = $body->weight;
-      $productModel->height = $body->height;
-      $productModel->width = $body->width;
-      $productModel->length = $body->length;
+      $modelByType = $this->model($body->type);
 
-      $productModel = $productModel->create();
+      $modelByType->setName($body->name);
+      $modelByType->setPrice(floatval($body->price));
+      $modelByType->setSku($body->sku);
+      $modelByType->setType($body->type);
+      $modelByType->setAttributes($body);
+
+      $modelByType = $modelByType->create();
       
-      if ($productModel) {
+      if ($modelByType) {
         http_response_code(201);
-        echo json_encode($productModel);
+        echo json_encode($body);
         return;
-      } 
+      };
 
       http_response_code(500);
     }
